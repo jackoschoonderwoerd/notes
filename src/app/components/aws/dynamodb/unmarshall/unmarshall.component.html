@@ -1,0 +1,145 @@
+<div class="container">
+  <h4>
+    Unmarshall
+  </h4>
+  <h4>
+    Multiple items from DynamoDB table through Lambda.
+  </h4>
+  <ul>
+    <li>
+      npm install --save aws-sdk
+    </li>
+    <li>
+      npm install -- save dynamo-converters
+    </li>
+    <li>
+      index.html:
+      <ul>
+        <li>
+          &#60;!-- https://github.com/aws/aws-amplify/issues/678 fix: -- &#62;
+          <ul>
+            <li>
+              &#60;script &#62;
+              <ul>
+                <li>
+                  if (global === undefined) &#123;
+                </li>
+                <ul>
+                  <li>
+                    var global = window;
+                  </li>
+                </ul>
+                <li>
+                  &#125;
+                </li>
+              </ul>
+            </li>
+            <li>
+              &#60;/script &#62;
+            </li>
+          </ul>
+          &#60;!-- https://github.com/aws/aws-amplify/issues/678 fix end-- &#62;
+        </li>
+      </ul>
+    </li>
+    <li>
+      service:
+    </li>
+    <li>
+      import * as AWS from 'aws-sdk';
+    </li>
+    <li>
+      service:
+      <ul>
+        <li>
+          this.http.get('***REPLACE WITH URL***')
+          <ul>
+            <li>
+              .subscribe((data: any) => &#123;
+              <ul>
+                <li>
+                  console.log(data);<br>
+                  var unmarshalledData = AWS.DynamoDB.Converter.unmarshall(data);<br>
+                  console.log(unmarshalledData);<br>
+                  data.Items.forEach(item => &#123;
+                  <ul>
+                    <li>
+                      console.log(AWS.DynamoDB.Converter.unmarshall(item));
+                    </li>
+                  </ul>
+                  &#125;);
+                </li>
+              </ul>
+            </li>
+            <li>
+              &#125;
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+
+    <li>
+      tsconfig.app.json:
+    </li>
+    <li>
+      &#123;
+      <ul>
+        <li>
+          &quot;extends&quot;: &quot;./tsconfig.json&quot;,
+        </li>
+        <li>
+          &quot;compilerOptions&quot;: &#123;
+          <ul>
+            <li>
+              &quot;outDir&quot;: &quot;./out-tsc/app&quot;,
+            </li>
+            <li style="color:red;"><strong>
+                &quot;types&quot;: &#91;&quot;node&quot;&#93;</strong>
+            </li>
+          </ul>
+          <!-- </li> -->
+          <!-- <li> -->
+
+          <!-- &#125;, -->
+          <!-- </li> -->
+          <!-- <li> -->
+
+          <!-- &quot;files&quot;: &#91; -->
+          <!-- </li> -->
+          <ul>
+            <li>
+
+              &quot;src/main.ts&quot;,
+            </li>
+            <li>
+              &quot;src/polyfills.ts&quot;
+
+            </li>
+          </ul>
+          <!-- <li> -->
+
+          <!-- &#93;, -->
+          <!-- </li> -->
+          <!-- <li> -->
+
+          &quot;include&quot;: &#91;
+          <ul>
+            <li>
+
+              &quot;src/**/*.d.ts&quot;
+            </li>
+          </ul>
+          <!-- <li> -->
+
+          <!-- &#93; -->
+          <!-- </li> -->
+        </li>
+      </ul>
+    </li>
+    <li>
+    &#125;
+    </li>
+  </ul>
+</div>

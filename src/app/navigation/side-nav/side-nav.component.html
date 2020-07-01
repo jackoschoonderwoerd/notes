@@ -1,0 +1,17 @@
+<div class="sidenav">
+  <nav
+    [ngClass]="{ 'mobile-nav-open': mobileNavStatus }"
+    class="mobile-nav-closed">
+    <p (click)="toggle()" class="mobile-nav__item"><a [routerLink]="['bootstrap']">Bootstrap</a></p>
+    <p (click)="toggle()" class="mobile-nav__item"><a [routerLink]="['deploy-to-s3']">Deploy to S3</a></p>
+    <p (click)="toggle()" class="mobile-nav__item"><a [routerLink]="['git']"> Git</a></p>
+    <p (click)="toggle()" class="mobile-nav__item"><a [routerLink]="['ssl']"> SSL</a></p>
+    <p (click)="toggle()" class="mobile-nav__item"><a [routerLink]="['unmarshall']">Unmarshall</a></p>
+    <p (click)="toggle()" class="mobile-nav__item"><a [routerLink]="['change-port']">Change port</a></p>
+  </nav>
+</div>
+
+
+
+
+

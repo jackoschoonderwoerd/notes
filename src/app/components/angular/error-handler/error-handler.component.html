@@ -1,0 +1,80 @@
+<div class="container">
+  <h4>{{title}}</h4>
+  <p><a
+      href="https://www.tektutorialshub.com/angular/error-handling-in-angular-applications/">https://www.tektutorialshub.com/angular/error-handling-in-angular-applications/</a>
+  </p>
+
+  <ol>
+    <li>
+      Create GlobalHandlerService
+      <pre>
+       {{examples.service}}
+     </pre>
+    </li>
+    <li>
+      App Module
+      <pre>
+        {{examples.appModule}}
+      </pre>
+    </li>
+    <li>
+      Component
+      <pre>
+        {{examples.component}}
+       </pre>
+    </li>
+  </ol>
+  <hr>
+  <h4>Best Practices in Handling Errors</h4>
+  <p>Now, we learned how to handle errors, here are a few things you should keep in mind while designing an Error
+    Handler service.</p>
+  <ol>
+    <li>
+      Use a try.. catch block to handle the known errors. Handle it accordingly. If you are not able to handle it, then
+      re-throw it.
+    </li>
+    <li>
+      Use a global error handler to trap all unhandled errors and show a notification to the user.
+    </li>
+    <li>
+      The ErrorHandler does not trap HTTP Errors, You need to Use HTTP Interceptors to handle HTTP Errors. You can refer
+      to this article how to handle HTTP Errors in Angular.
+    </li>
+    <li>
+      Check for type of error in the error handler and act accordingly
+      <ul>
+        <li>
+          For Example, if is an error from the back end (HTTP Error) you can use the HTTP Status Code to take necessary
+          action.
+        </li>
+        <li>
+          401 Unauthorized error you can redirect the user to the login page
+        </li>
+        <li>
+          500 Internal Server Error you can ask the user to retry after some time while sending a notification to the
+          server administrator e
+        </li>
+      </ul>
+    </li>
+    <li>
+      For all other unhandled errors, log the errors back to the back end server ( or to any third party error
+      providers). You can then look at those logs and make necessary changes to the app.
+    </li>
+  </ol>
+
+  <h4>Redirecting after error</h4>
+
+  <ol>
+    <li>Create error component
+      <pre>{{examples.errorComponent}}</pre>
+    </li>
+    <li>
+      Add route to app.routing.module.ts
+    </li>
+    <li>
+      And in the GlobalErrorHandlerService, inject router and use router.navigate(['/error']) to go to the custom error page
+      <pre>{{examples.globalErrorHandlerService}}</pre>
+    </li>
+  </ol>
+
+</div>

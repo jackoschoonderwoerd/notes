@@ -1,0 +1,426 @@
+<div class="container">
+  <h4>
+
+    Esterling Accime
+  </h4>
+
+  <h5>
+
+    Deploy static website to AWS with HTTPS - S3, Route 53, CloudFront, Certificate Manager
+  </h5>
+  <p>
+
+    <a href="https://www.youtube.com/watch?v=lB4DTqMEumY&t=1s">https://www.youtube.com/watch?v=lB4DTqMEumY&t=1s</a>
+  </p>
+
+  <ol>
+    <li><strong>- 00:00</strong> </li>
+    <li>
+      - get yourself a domain name
+    </li>
+    <li>
+      - create index.html
+    </li>
+  </ol>
+  <ol>
+    <li><mat-icon>navigate_next</mat-icon>
+      <strong>
+        - 06:00 - AWS S3:
+      </strong>
+    </li>
+    <li class="button">
+      - create a bucket :
+    </li>
+    <li class="input">
+      - EXAMPLE.COM
+    </li>
+    <li class="button">
+      - Create
+    </li>
+    <li class="button">
+      - Upload
+    </li>
+    <li class="button">
+      - EXAMPLE.COM
+    </li>
+    <li class="button">
+      - Upload
+    </li>
+    <li class="button">
+      - Permissions
+    </li>
+    <li class="button">
+      - Edit
+    </li>
+    <li>
+      - <mat-icon>check_box_outline_blank</mat-icon>Block all public access
+    </li>
+    <li class="button">
+      - Save
+    </li>
+    <li class="input">
+      - confirm
+    </li>
+    <li class="button">
+      - Confirm
+    </li>
+    <li class="button">
+
+      - Edit
+    </li>
+    <li class="button">
+      - Bucket Policy
+      
+    </li>
+
+    <ul class="input">
+      <li>
+        &#123;
+      </li>
+      <ul>
+        <li>
+
+          "Version": "2012-10-17",
+        </li>
+        <li>
+          "Statement": [
+        </li>
+        <ul>
+          <li>
+
+            &#123;
+          </li>
+          <ul>
+            <li>
+
+              "Sid": "PublicRead",
+            </li>
+            <li>
+
+              "Effect": "Allow",
+            </li>
+            <li>
+
+              "Principal": "*",
+            </li>
+            <li>
+
+              "Action": "s3:GetObject",
+            </li>
+            <li>
+
+              "Resource": "arn:aws:s3:::EXAMPLE.COM/*"
+            </li>
+          </ul>
+          <li>
+
+            &#125;
+          </li>
+        </ul>
+        <li>
+          ]
+
+        </li>
+      </ul>
+      <li>
+        &#125;
+
+      </li>
+    </ul>
+    <li class="button">
+      - Save
+    </li>
+    <li class="button">
+      - Amazon S3
+    </li>
+    <li class="button">
+      - EXAMPLE.COM
+    </li>
+    <li class="button">
+      - Properties
+    </li>
+    <li class="button">
+
+      - static website hosting:
+    </li>
+    <li class="">
+      <mat-icon>radio_button_checked</mat-icon>- Use this bucket to host a website
+    </li>
+    <li class="input">
+      - index.html
+    </li>
+    <li class="input">
+      - index.html
+    </li>
+    <li class="button">
+      Save
+    </li>
+    <li class="button">
+      - static website hosting
+    </li>
+    <li>
+      - <u>...EXAMPLE.COM...</u>
+    </li>
+    <li>
+      - site MUST be accessible in browser
+    </li>
+  </ol>
+
+
+  <ol>
+    <li><mat-icon>navigate_next</mat-icon>
+      <strong>
+        10:30 - Route 53
+      </strong>
+    </li>
+    <li class="button">
+      - create hosted zone
+    </li>
+    <li class="button">
+      - create hosted zone
+    </li>
+    <li>
+
+      - Domain name <span class="input">EXAMPLE.COM</span>
+    </li>
+    <li class="button ">
+      - Create
+    </li>
+  </ol>
+
+
+  <ol>
+    <li>
+      <mat-icon>navigate_next</mat-icon><strong>11:50 - Domain name provider (Strato)</strong>
+    </li>
+    <li>
+      - Domeinbeheer
+    </li>
+    <li>
+      - Your domain configureren
+    </li>
+    <li>
+
+      - DNS instellingen
+    </li>
+    <li>
+
+      - NS-record -configuratie
+    </li>
+    <li>
+
+      - Eigen naamservers
+    </li>
+    <li>
+
+      - Route 53
+    </li>
+    <li>
+
+      - Domain name NS
+    </li>
+    <li>
+
+      - Copy the (four) Values into the Nameserverfields of the domainname provider
+    </li>
+    <li>
+
+      - Get rid of the periods at the end and check for spaces at the beginning and end of the entries
+    </li>
+    <li>
+      - NS-records opslaan
+    </li>
+    <li>
+      - Double check the names
+    </li>
+  </ol>
+
+
+  <ol>
+    <li><mat-icon>navigate_next</mat-icon>
+      <strong>
+        14:00 - AWS Certificate manager
+      </strong>
+    </li>
+    <li>
+
+      - Request Certificate
+    </li>
+    <li>
+
+      - Request a public certificate
+    </li>
+    <li>
+
+      - Fill in your domain name EXAMPLE.COM
+    </li>
+    <li>
+
+      - Select DNS validation
+    </li>
+    <li>
+
+      - Review
+    </li>
+    <li>
+
+      - Confirm
+    </li>
+    <li>
+
+      - Expand
+    </li>
+    <li>
+
+      - Expand
+    </li>
+    <li>
+
+      - Continue
+    </li>
+    <li>
+
+      - IF (Create record in Route 53) &#123;
+    </li>
+    <ol>
+      <li>
+
+        Create record in Route 53
+      </li>
+    </ol>
+    <li>
+
+      16:00
+    </li>
+    <li>
+
+      &#125; ELSE &#123;
+    </li>
+    <ol>
+      <li>
+
+        create manually: copy Name (without the domain name), Type and Value
+      </li>
+    </ol>
+    <li>
+      &#125;
+    </li>
+    <li>
+
+      - Route 53
+    </li>
+    <li>
+
+      - Hosted Zones
+    </li>
+    <li>
+
+      - Your hosted zone
+    </li>
+    <li>
+
+      - Create Record set
+    </li>
+    <li>
+
+      - (Doublecheck Type = CNAME)
+    </li>
+    <li>
+
+      - Use the copied values (remove period at the end of the values)
+    </li>
+  </ol>
+
+  <ol>
+    <li>
+      <strong>
+
+        17:20 - AWS Cloudfront
+      </strong>
+    </li>
+    <li>
+
+      - Create Distribution
+    </li>
+    <li>
+
+      - WEB Get started
+    </li>
+    <li>
+
+      - Origin domain name: Fill in the Endpoint from S3 Static website hosting (without http://)!!!
+    </li>
+    <li>
+
+      - Select 'Redirect HTTP to HTTPS'
+    </li>
+    <li>
+
+      - Alternate domain names: Fill in your domain name EXAMPLE.COM
+    </li>
+    <li>
+
+      - Create distribution
+    </li>
+    <li>
+
+      - Status: In Progress: WAIT (for up to forty minutes)
+    </li>
+    <li>
+
+      - Copy cloudfront domain name & paste in browser
+    </li>
+    <li>
+
+      - Site should be publically accessible and padlocked
+    </li>
+    <li>
+
+    </li>
+  </ol>
+
+  <ol>
+    <li>
+      <strong>
+
+        21:50 - AWS Route 53
+      </strong>
+    </li>
+    <li>
+
+      - Hosted zones
+    </li>
+    <li>
+
+      - Domain name
+    </li>
+    <li>
+
+      - Create Record Set
+    </li>
+    <li>
+
+      - Name: empty ('')
+    </li>
+    <li>
+
+      - Type: A-IPv4 address
+    </li>
+    <li>
+
+      - Alias: Yes
+    </li>
+    <li>
+
+      - Alias target: AWS Cloudfront Domain Name (XXX.cloudfront.net)
+    </li>
+    <li>
+
+      - WAIT for at least 2 minutes
+    </li>
+    <li>
+      - Domain name should be padlocked and publically accessible.
+
+    </li>
+  </ol>
+</div>

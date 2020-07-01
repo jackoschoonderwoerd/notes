@@ -1,0 +1,97 @@
+<header class="main-header" fxLayout fxLayoutAlign="space-between">
+
+  
+  
+
+  <!-- <button mat-button [matMenuTriggerFor]="newIndex">new Index</button> -->
+
+  <!-- <mat-menu #newIndex>
+    <button *forEach="let navigation"></button>
+  </mat-menu> -->
+
+
+  <i class="fas fa-3x fa-bars" (click)="onToggleSideNav()"></i>
+  <button mat-button [matMenuTriggerFor]="index">Index</button>
+
+  <!-- index -->
+  
+
+  <mat-menu #index="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="angular">Angular</button>
+    <button mat-menu-item [matMenuTriggerFor]="aws">AWS</button>
+    <button mat-menu-item [matMenuTriggerFor]="bootstrap">Bootstrap</button>
+    <button mat-menu-item [matMenuTriggerFor]="git">GIT</button>
+    <button mat-menu-item [matMenuTriggerFor]="tests">TESTS</button>
+  </mat-menu>
+
+  <!-- index-angular -->
+
+  <mat-menu #angular="matMenu">
+    <button mat-menu-item routerLink="change-port">Change Port 4200</button>
+    <button mat-menu-item [matMenuTriggerFor]="angular_dependencies">Dependencies</button>
+    <button mat-menu-item [matMenuTriggerFor]="angular_error_handling">Error Handling</button>
+  </mat-menu>
+
+  <!-- index-aws -->
+
+  <mat-menu #aws="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="aws_route53">Route 53</button>
+    <button mat-menu-item [matMenuTriggerFor]="aws_s3">S3</button>
+    <button mat-menu-item [matMenuTriggerFor]="aws_dynamodb">Dyanmodb</button>
+  </mat-menu>
+
+  <!-- index-bootstrap -->
+
+  <mat-menu #bootstrap="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="bootstrap_angular">Angular</button>
+  </mat-menu>
+
+  <mat-menu #git="matMenu">
+    <button mat-menu-item routerLink="git">GIT</button>
+  </mat-menu>
+
+  <!-- index-tests -->
+
+  <mat-menu #tests="matMenu">
+    <button mat-menu-item routerLink="test01">TEST 01</button>
+  </mat-menu>
+
+  <!-- index-aws-route53 -->
+
+  <mat-menu #aws_route53>
+    <button mat-menu-item routerLink="ssl">SSL Certificate</button>
+  </mat-menu>
+
+  <!-- index-aws-s3 -->
+
+  <mat-menu #aws_s3>
+    <button mat-menu-item routerLink="deploy-to-s3">Deploy to S3</button>
+  </mat-menu>
+
+  <!-- index-aws-dynamodb -->
+
+  <mat-menu #aws_dynamodb>
+    <button mat-menu-item routerLink="unmarshall">Unmarshall</button>
+  </mat-menu>
+
+  <!-- index-aws-bootstrap -->
+
+  <mat-menu #bootstrap_angular>
+    <button mat-menu-item routerLink="bootstrap">Add to Angular</button>
+  </mat-menu>
+
+  <mat-menu #angular_all="matMenu">
+    <button mat-menu-item routerLink="change-port">Change Port</button>    
+  </mat-menu>
+
+  <mat-menu #angular_error_handling>
+    <button mat-menu-item routerLink="error-handler">Error Handling</button>
+  </mat-menu>
+
+  <mat-menu #angular_dependencies="matMenu">
+    <button mat-menu-item routerLink="bootstrap">Bootstrap</button>
+  </mat-menu>
+
+  <span class="title">{{title | uppercase }}</span>
+
+</header>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+
+:root {
+  --dark-green: #0e4f1f;
+  --highlight-color: #ff1b68;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: red;
+}
+
+.container {
+  background-color: #CCC;
+  min-height: 1000px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+
+
+main {
+  padding: 3rem;
+  background-color: #e5e5e5;
+  min-height: 100%;
+}
+ul{
+  list-style: none;
+  
+  padding-left: 10px;
+}
+.button{
+  background-color: lightblue;
+}
+.input {
+  border: 1px solid black;
+}
+li{
+  margin: 2px;
+  padding: 2px;
+}
+.xmp-code {
+  border: 2px solid #CCC;
+  color: red;
+}
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
