@@ -11,15 +11,19 @@ import { UnmarshallComponent } from './components/aws/dynamodb/unmarshall/unmars
 import { ChangePortComponent } from './components/angular/change-port/change-port.component';
 import { Test01Component } from './components/tests/test01/test01.component';
 import { ErrorHandlerComponent } from './components/angular/error-handler/error-handler.component';
+import { VsCodeComponent } from './components/git/vs-code/vs-code.component';
+import { StartEndLogstreamComponent } from './components/aws/cloudWatch/start-end-logstream/start-end-logstream.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: BootstrapComponent },
   { path: 'bootstrap', component: BootstrapComponent },
   { path: 'git', component: GitComponent },
+  { path: 'git-vs-code', component: VsCodeComponent },
   { path: 'deploy-to-s3', component: DeployToS3Component },
   { path: 'ssl', component: SslComponent },
   { path: 'unmarshall', component: UnmarshallComponent},
+  { path: 'start-end-logstream', component: StartEndLogstreamComponent },
   { path: 'change-port', component: ChangePortComponent },
   { path: 'test01', component: Test01Component },
   { path: 'error-handler', component: ErrorHandlerComponent },

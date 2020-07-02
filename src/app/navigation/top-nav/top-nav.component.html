@@ -37,7 +37,8 @@
   <mat-menu #aws="matMenu">
     <button mat-menu-item [matMenuTriggerFor]="aws_route53">Route 53</button>
     <button mat-menu-item [matMenuTriggerFor]="aws_s3">S3</button>
-    <button mat-menu-item [matMenuTriggerFor]="aws_dynamodb">Dyanmodb</button>
+    <button mat-menu-item [matMenuTriggerFor]="aws_dynamodb">Dynamodb</button>
+    <button mat-menu-item [matMenuTriggerFor]="aws_cloudwatch">Cloudwatch</button>
   </mat-menu>
 
   <!-- index-bootstrap -->
@@ -48,6 +49,7 @@
 
   <mat-menu #git="matMenu">
     <button mat-menu-item routerLink="git">GIT</button>
+    <button mat-menu-item routerLink="git-vs-code">VS Code</button>
   </mat-menu>
 
   <!-- index-tests -->
@@ -72,6 +74,9 @@
 
   <mat-menu #aws_dynamodb>
     <button mat-menu-item routerLink="unmarshall">Unmarshall</button>
+  </mat-menu>
+  <mat-menu #aws_cloudwatch>
+    <button mat-menu-item routerLink="start-end-logstream">Start End Logstream</button>
   </mat-menu>
 
   <!-- index-aws-bootstrap -->
