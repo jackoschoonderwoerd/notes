@@ -27,4 +27,28 @@
       </pre>
     </li>
   </ol>
+  <ul>
+    <li>
+      STACK OVERFLOW:
+    </li>
+    <li>
+      <a href="https://stackoverflow.com/questions/51285835/how-to-disable-default-log-messages-from-lambda-in-python/53909607#53909607">https://stackoverflow.com/questions/51285835/how-to-disable-default-log-messages-from-lambda-in-python/53909607#53909607</a>
+    </li>
+    <li>
+      <p>
+        However there might be cases where you want one specific Lambda function to not send logs at all. You can solve this by creating a new role specifically for that Lambda function, and not have the logging permission there.
+      </p>
+      <p>
+        FWIW, if you need to toggle between logging and no logging frequently, you can have a policy file as the following.
+      </p>
+    </li>
+    <li>
+      <pre>
+        {{ examples.example_03 }}
+      </pre>
+    </li>
+    <li>
+      and change the "Deny" to "Allow" when you require logging.
+    </li>
+  </ul>
 </div>
