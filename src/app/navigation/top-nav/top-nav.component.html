@@ -28,6 +28,7 @@
 
   <mat-menu #angular="matMenu">
     <button mat-menu-item routerLink="change-port">Change Port 4200</button>
+    <button mat-menu-item routerLink="new-project-setup">New Project Setup</button>
     <button mat-menu-item [matMenuTriggerFor]="angular_dependencies">Dependencies</button>
     <button mat-menu-item [matMenuTriggerFor]="angular_error_handling">Error Handling</button>
   </mat-menu>
@@ -88,6 +89,8 @@
   <mat-menu #angular_all="matMenu">
     <button mat-menu-item routerLink="change-port">Change Port</button>    
   </mat-menu>
+
+
 
   <mat-menu #angular_error_handling>
     <button mat-menu-item routerLink="error-handler">Error Handling</button>

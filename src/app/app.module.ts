@@ -27,6 +27,7 @@ import { ErrorHandlerComponent } from './components/angular/error-handler/error-
 import { HttpErrorHandlerComponent } from './components/angular/http-error-handler/http-error-handler.component';
 import { VsCodeComponent } from './components/git/vs-code/vs-code.component';
 import { StartEndLogstreamComponent } from './components/aws/cloudWatch/start-end-logstream/start-end-logstream.component';
+import { NewProjectSetupComponent } from './components/angular/new-project-setup/new-project-setup.component';
 
 
 
@@ -51,7 +52,8 @@ import { StartEndLogstreamComponent } from './components/aws/cloudWatch/start-en
     ErrorHandlerComponent,
     HttpErrorHandlerComponent,
     VsCodeComponent,
-    StartEndLogstreamComponent
+    StartEndLogstreamComponent,
+    NewProjectSetupComponent
   ],
   imports: [
     BrowserModule,
